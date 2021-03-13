@@ -76,7 +76,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Allergies?</h1> <!--formats heading at top pf page-->
 </div>
 	
 <div id="content" class="w3-container">
@@ -97,44 +97,52 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Are your eyes watery or itchy?</p>  <!--this is the first question of the survey-->
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to page 2-->
 		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a><!--if clicked no, it will add to cold count and move to page 2-->
-    	</div>
+    	</div><!--content-->
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"><!-- labeled page 2--> 
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Question 2</h1><!-- labeled question 2--> 
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a><!--if clicked yes, it will add to cold count and move to page 3-->
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a><!--if clicked no, it will add to allergy count and move to page 3-->
-	</div>
+	</div><!--content-->
 </div>
 	
-<div class="page" id="three">
+<div class="page" id="three"><!-- labeled page 3--> 
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Question 3</h1><!-- labeled question 3--> 
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to cold count and move to page 4-->
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to allergy count and move to page 4-->
-	</div>
+	</div><!--content-->
 </div>
 	
-<div class="page" id="four">
+<div class="page" id="four"><!-- labeled page 4--> 
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+		<h1>Question 4</h1><!-- labeled question 4-->
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to results page-->
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to cold count and move to results page-->
-	</div>
+	</div><!--content-->
 </div>	
+
+<div class="page" id= "five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1> <!--places a heading on the results page-->
+<script>
+var resultText = document.getElementById("results");
+</script><!--uses the data from the previous scrip to output the probabilities-->
+	<p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent</p>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
