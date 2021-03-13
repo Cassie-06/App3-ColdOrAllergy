@@ -137,20 +137,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="Results" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to results page-->
-		<a href="Results" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to cold count and move to results page-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to results page-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to cold count and move to results page-->
 	</div><!--content-->
 </div>	
 
-<div class="page" id= "Results">
+<div class="page" id= "five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1> <!--places a heading on the results page-->
 
 	</div>
 	
 	<div id="content" class="w3-container">
+		<a onclick="getResults();" class="w3-btn w3-black"> Results!></a><!--creates a Results button-->
 		<p id="Results"></p>
-		<a href="#one" class="w3-btn w3-black"> Results></a><!--creates a Results button-->
 		
 	</div><!--ends the content for results page-->
 
