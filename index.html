@@ -131,18 +131,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to results page-->
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to cold count and move to results page-->
+		<a href="results" onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--if clicked yes, it will add to allergy count and move to results page-->
+		<a href="results" onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--if clicked no, it will add to cold count and move to results page-->
 	</div><!--content-->
 </div>	
 
-<div class="page" id= "five">
+<div class="page" id= "results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1> <!--places a heading on the results page-->
 <script>
-var resultText = document.getElementById("results");
+	var resultText = document.getElementById("results");
 </script><!--uses the data from the previous scrip to output the probabilities-->
-	<p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent</p>
+	</div>
+		
+	<div id="content" class="w3-container">
+		<p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent</p>
+	</div><!--ends the content for results page-->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
